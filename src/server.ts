@@ -8,7 +8,6 @@ const app = express()
 connectDB()
 
 //Leer datos de formularios
-
 app.use(express.json())
 
 app.use('/', router)

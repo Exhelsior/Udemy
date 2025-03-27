@@ -6,12 +6,7 @@ import { checkPassword, hashPassword } from '../utils/auths'
 
 export const createAccount = async (req: Request, res: Response) => {
     
-    let errors = validationResult(req)
-    if (!errors.isEmpty()){
-        res.status(400).json({ errors: errors.array() })
-        return
-    }
-    return
+
 
     const { email, password } = req.body
 
@@ -63,5 +58,5 @@ export const login = async (req: Request, res: Response) => {
         return
     }
 
-    res.send('Autenticando...')
+    res.send('Autenticado...')
 }
